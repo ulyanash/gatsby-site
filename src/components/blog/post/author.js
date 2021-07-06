@@ -7,12 +7,12 @@ const PostAuthor = ({author}) => {
   }
 console.log(author?.avatar, 'avatar')
   return (
-    <p>
+    <div>
       <PostAuthorImage image={author?.avatar} alt={author.name} />
       <span>
         Author: {author.name}
       </span>
-    </p>
+    </div>
   )
 }
 
