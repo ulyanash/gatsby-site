@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 const BlogListItem = ({item}) => (
   <div>
-      <h2><Link to={'/post/' + item.slug}>{item.title}</Link></h2>
+      <h2> {item.position} <Link to={'/post/' + item.slug}>{item.title}</Link></h2>
       <p
           dangerouslySetInnerHTML={{
             __html: item.content,
