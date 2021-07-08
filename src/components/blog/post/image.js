@@ -3,7 +3,7 @@ import Img from 'gatsby-image'
 
 const PostImage = ({image, alt}) => {
   if (image == null) {
-    return
+    return ''
   }
   return (
     <div className="post-image">

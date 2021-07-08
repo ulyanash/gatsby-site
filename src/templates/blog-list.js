@@ -18,7 +18,7 @@ export default class BlogList extends React.Component {
           ))
         }
 
-        <BlogPagination total={numPages} current={currentPage} />
+        <BlogPagination total={numPages} current={currentPage} url={`/blog/`} />
         
       </BlogLayout>
     )

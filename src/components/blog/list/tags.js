@@ -20,7 +20,7 @@ const AllTagsList = () => {
   return (
     <div className={styles.tags_list}>
       <h3>List of Tags</h3>
-      {data.allDatoCmsTag.edges.map(({node}) => { return <Link to={'/tag/'+node.slug}><span className={tag_styles.tag}>{node.name}</span></Link> })}
+      {data.allDatoCmsTag.edges.map(({node}) => { return <Link to={'/tag/'+node.slug} key={'tag-list-'+node.slug}><span className={tag_styles.tag}>{node.name}</span></Link> })}
     </div>
   )
 }
