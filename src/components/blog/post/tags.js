@@ -1,12 +1,13 @@
 import React from 'react'
+import * as styles from './styles/tags.module.css'
 
 const PostTags = ({tags}) => {  
   return (
     <p>
-      Tags: {
+      {
         tags.map(function(tag){
-          return tag.name;
-      }).join(', ')
+          return <span className={styles.tag}>tag.name</span>;
+        })
       }
     </p>
   )

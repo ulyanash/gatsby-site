@@ -6,7 +6,7 @@ const BlogListItem = ({item}) => (
       <h2> {item.position} <Link to={'/post/' + item.slug}>{item.title}</Link></h2>
       <p
           dangerouslySetInnerHTML={{
-            __html: item.content,
+            __html: item.contentNode.childMarkdownRemark.excerpt,
           }}
           itemProp="content"
         />

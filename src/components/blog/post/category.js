@@ -4,7 +4,7 @@ const PostCategory = ({category}) => {
   return (
     category && 
     <span>
-      Category: {category.name}
+      {category.name}
     </span>
   )
 }

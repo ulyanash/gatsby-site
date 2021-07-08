@@ -10,10 +10,14 @@ const BlogPage = () => {
         edges {
           node {
             id
-            content
             title
             slug
             position
+            contentNode {
+              childMarkdownRemark {
+                excerpt(pruneLength: 100, truncate: true, format: PLAIN)
+              }
+            }
           }
         }
       }
