@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import BlogListItem from '../components/blog/list/item'
+import BlogPagination from '../components/blog/list/pagination'
 
 export default class BlogList extends React.Component {
 
@@ -17,11 +18,8 @@ export default class BlogList extends React.Component {
           ))
         }
 
-        {Array.from({ length: numPages }, (_, i) => (
-          <Link key={`pagination-number${i + 1}`} to={`/blog/${i === 0 ? "" : i + 1}`}>
-            {i + 1}
-          </Link>
-        ))}
+        <BlogPagination total={numPages} current={currentPage} />
+        
       </Layout>
     )
   }
