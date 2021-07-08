@@ -1,16 +1,16 @@
 import React from 'react'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
 import { graphql } from 'gatsby'
-import Layout from "../components/layout"
 import PostImage from "../components/blog/post/image"
 import PostTitle from "../components/blog/post/title"
 import PostMeta from "../components/blog/post/meta"
 import PostBody from "../components/blog/post/body"
+import BlogLayout from '../components/blog-layout'
 
 const Post = ({ data }) => {
 
   return (
-    <Layout>
+    <BlogLayout>
       <article className="post">
         <HelmetDatoCms seo={data.datoCmsPost.seoMetaTags} />
         <div className="post-inner">
@@ -20,7 +20,7 @@ const Post = ({ data }) => {
           <PostBody html={data.datoCmsPost.contentNode.childMarkdownRemark.html} />
         </div>
       </article>
-    </Layout>
+    </BlogLayout>
   )
 }
 

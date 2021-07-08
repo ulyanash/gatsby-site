@@ -1,18 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from "../components/layout"
 import BlogListItem from '../components/blog/list/item'
+import BlogLayout from '../components/blog-layout'
 
 const Tag = ({ data }) => {
 
   return (
-    <Layout pageTitle={`Tag ${data.datoCmsTag.name}`}>
+    <BlogLayout pageTitle={`Tag ${data.datoCmsTag.name}`}>
       {
         data.allDatoCmsPost.edges.map(({ node }, index) => (
           <BlogListItem item={node} key={index}/>
         ))
       }
-    </Layout>
+    </BlogLayout>
   )
 }
 

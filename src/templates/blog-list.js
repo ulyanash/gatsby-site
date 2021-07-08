@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from "../components/layout"
+import BlogLayout from "../components/blog-layout"
 import BlogListItem from '../components/blog/list/item'
 import BlogPagination from '../components/blog/list/pagination'
 
@@ -11,7 +11,7 @@ export default class BlogList extends React.Component {
     const data = this.props.data
 
     return (
-      <Layout pageTitle={`Blog list`}>
+      <BlogLayout pageTitle={`Blog list`}>
         {
           data.allDatoCmsPost.edges.map(({ node }, index) => (
             <BlogListItem item={node} key={index}/>
@@ -20,7 +20,7 @@ export default class BlogList extends React.Component {
 
         <BlogPagination total={numPages} current={currentPage} />
         
-      </Layout>
+      </BlogLayout>
     )
   }
 }
