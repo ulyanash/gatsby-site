@@ -6,7 +6,7 @@ const PostTags = ({tags}) => {
     <p>
       {
         tags.map(function(tag){
-          return <span className={styles.tag}>tag.name</span>;
+          return <a className={styles.tag} href={"/tag/"+tag.slug}>{tag.name}</a>;
         })
       }
     </p>

@@ -27,9 +27,6 @@ const Post = ({ data }) => {
 export const query = graphql`
   query PostQuery($slug: String!) {
     datoCmsPost(slug: { eq: $slug }) {
-      category {
-        name
-      }
       content
       id
       image {
@@ -48,6 +45,7 @@ export const query = graphql`
       title
       tag {
         name
+        slug
       }
       author {
         name

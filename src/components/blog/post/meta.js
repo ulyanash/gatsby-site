@@ -1,6 +1,5 @@
 import React from 'react'
 import PostAuthor from './author'
-import PostCategory from './category'
 import PostTags from './tags'
 import * as styles from './styles/meta.module.css'
 
@@ -13,7 +12,6 @@ const PostMeta = ({item}) => {
       <span className={styles.meta_item}>
         {item.contentNode.childMarkdownRemark.timeToRead} min
       </span>
-      <PostCategory category={item.category} />
       <PostAuthor author={item.author} />
       <PostTags tags={item.tag} />
     </div>

@@ -4,7 +4,7 @@ import * as styles from './styles/author.module.css'
 
 const PostAuthor = ({author}) => {  
   if (!author) {
-    return;
+    return '';
   }
 
   return (
