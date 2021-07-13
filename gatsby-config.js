@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://gatsbysite70129.gatsbyjs.io",
     title: "My Gatsby Site",
   },
   plugins: [
@@ -16,5 +16,11 @@ module.exports = {
         disableLiveReload: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: "/",
+      }
+    }
   ],
 };

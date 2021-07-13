@@ -14,7 +14,7 @@ const BlogPagination = ({total, current, url}) => {
   return (
     <div className={styles.pagination}>
       {Array.from({ length: total }, (_, i) => (
-        (i+1==current) ? <CurrentPage i={i} key={'pagination-item-'+(i+1)} /> : <LinkToPage i={i} key={'pagination-item-'+(i+1)} url={url} />
+        (i+1 === current) ? <CurrentPage i={i} key={'pagination-item-'+(i+1)} /> : <LinkToPage i={i} key={'pagination-item-'+(i+1)} url={url} />
       ))}
     </div>
     )
